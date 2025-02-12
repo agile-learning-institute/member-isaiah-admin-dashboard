@@ -29,11 +29,11 @@ selectors.forEach(selector => {
 
 const elementsToCreate = [
     { parent: elements[".left-container"], classes: ["search-icon", "search"], content: <span class="mdi mdi-magnify"></span> },
-    { parent: elements[".left-container"], classes: ["search-bar", "search"], content: <input type="text" id="search_bar" name="search_bar"> },
+    { parent: elements[".left-container"], classes: ["search-bar", "search"], content: <input type="text" id="search_bar" name="search_bar"></input> },
     { parent: elements[".right-container"], classes: ["notification-icon", "right-div"], content: <span class="mdi mdi-bell-badge-outline"></span> },
-    { parent: elements[".right-container"], classes: ["cat-head-image", "right-div"], content: <img src="./images/catmww.png" alt="cat head image"> },
+    { parent: elements[".right-container"], classes: ["cat-head-image", "right-div"], content: <img src="./images/catmww.png" alt="cat head image"></img> },
     { parent: elements[".right-container"], classes: ["name-text", "right-div"], content: <span class="name-user">MorganOakley</span> },
-    { parent: elements[".first-con"], classes: ["image-large"], content: <img src="./images/catmww.png" alt="cat head image"> },
+    { parent: elements[".first-con"], classes: ["image-large"], content: <img src="./images/catmww.png" alt="cat head image"></img> },
     { parent: elements[".first-con"], classes: ["text-large"], content: <span class="greet-user">Hi there,</span><p class="name-morgan">Morgan Oakley (@morgan)</p> },
 ];
 
