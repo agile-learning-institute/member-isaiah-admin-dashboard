@@ -40,21 +40,3 @@ const iconsData = [
         "icon": "<svg class=\"list-items-icon\" xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\" fill=\"#5f6368\"><path d=\"m438-338 226-226-57-57-169 169-84-84-57 57 141 141Zm42 258q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Z\"/></svg>"
     }
 ];
-
-document.getElementById('fetchWeatherBtn').addEventListener('click', fetchWeather);
-function fetchWeather() {
-    fetch('https://wttr.in/?format=j1')
-        .then(response => response.json())
-        .then(data => {
-            const location = data.nearest_area[0].areaName[0].value;
-            const temperature = data.current_condition[0].temp_F;
-            const feelsLike = data.current_condition[0].FeelsLikeF;
-            const description = data.current_condition[0].weatherDesc[0].value;
-            displayWeather(location, temperature, feelsLike, description);
-        })
-        .catch(error => console.error('Error fetching weather data:', error));
-}
-
-function displayWeather(location, temperature, feelsLike, description) {
-    const weatherInfoDiv = document.getElementById('weatherInfo');
-    weatherInfoDiv.innerHTML = <><p>${location}</p><p>${temperature}°F</p><p>Feels Like: ${feelsLike}</p><p> ${description}</p></>}
