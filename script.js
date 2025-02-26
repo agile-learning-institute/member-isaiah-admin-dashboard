@@ -23,7 +23,7 @@ console.log("The sidebar has been loaded");
             html.innerText = item.heading4;
             html.innerText = item.sentence;
             html.innerHTML = item.threeImages;
-            projectContainerContainer.appendChild(html);
+            projectContainer.appendChild(html);
             });
 
    const anncouncementContainer = document.getElementById(".announcements");
