@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     iconsData.forEach(item => {
     const sidebarContainer = document.getElementById("sidebar");
         let html = document.createElement("div");
-        html.className = item.icon;
+        let svg = document.createElement("svg");
+        svg = item.path;
         html.innerText = item.label;
         sidebarContainer.appendChild(html);
     });
@@ -12,22 +13,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const projectContainer = document.getElementById("projectCards");
     textData.forEach(item => {
-        let html = document.createElement("div");
-        html.className = "card";
-        html.innerText = item.heading4;
-        html.innerText = item.sentence;
-        html.innerHTML = item.threeImages;
-        projectContainer.appendChild(html);
+        const card = document.createElement("div");
+        card.className = 'card';
+
+        const cardTitle = document.createElement("h2");
+        cardTitle.textContent = item.heading4;
+
+        const cardText = document.createElement("p");
+        cardText.textContent = item.sentence;
+
+        const cardIcons = document.createElement("svg");
+        cardIcons.svg = item.threeImages;
+
+        card.appendChild(cardTitle);
+        card.appendChild(cardText); 
+        card.appendChild(cardIcons);
+        projectContainer.appendChild(card);
     });
     console.log("The projectContainer has been loaded");
 
     const announcementContainer = document.getElementById("announcementCards");
     announcementsData.forEach(item => {
-            let html = document.createElement("div");
-            html.className = "card";
-            html.innerText = item.heading;
-            html.innerText = item.content;
-            announcementContainer.appendChild(html);
+            const announcementCard = document.createElement("div");
+            announcementCard.className = "card";
+
+            const announcementTitle = document.createElement("h2");
+            announcementTitle.textContent = item.heading;
+
+            const announcementText = document.createElement("p");
+            announcementText.textContent = item.content;
+
+            announcementCard.appendChild(announcementTitle);
+            announcementCard.appendChild(announcementText);
+            announcementContainer.appendChild(announcementCard);
     });
     console.log("The announcementContainer has been loaded");
 

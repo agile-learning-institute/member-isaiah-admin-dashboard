@@ -27,6 +27,7 @@ body {
 
 .sidebar {
   background-color:#60a5fa;
+  height: 109.5%;
 }
 
 .sidebar-icon {
@@ -60,12 +61,11 @@ body {
 }
 
 .body-container {
-  background-color:#E5E7EB;
-  box-shadow: 0px 0px 2px 0px grey;
-  padding: 20px 10px;
+  background-color: #e2e8f0;
   display: grid;
-  grid-template-columns: [row1-start] 65% [row1-end] auto [last-line];
-  gap: 10px;
+  grid-template-columns: 2.5fr 250px;
+  padding: 20px;
+  gap: 20px;
 }
 
 .right-body-con {
@@ -275,4 +275,16 @@ img {
   border: none;
   padding: 5px 17px;
   cursor: pointer;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
 }
