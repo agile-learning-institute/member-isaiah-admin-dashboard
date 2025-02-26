@@ -19,15 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         html.innerHTML = item.threeImages;
         projectContainer.appendChild(html);
     });
-    const projectContainer = document.getElementById(".projects");
-        textData.forEach(item => {
-            let html = document.createElement("div");
-            html.className = "card";
-            html.innerText = item.heading4;
-            html.innerText = item.sentence;
-            html.innerHTML = item.threeImages;
-            projectContainer.appendChild(html);
-            });
+    console.log("The projectContainer has been loaded");
 
     const announcementContainer = document.getElementById("announcementCards");
     announcementsData.forEach(item => {
@@ -37,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             html.innerText = item.content;
             announcementContainer.appendChild(html);
     });
+    console.log("The announcementContainer has been loaded");
 
     const trendingContainer = document.getElementById("trendingCards");
     trendingData.forEach(item => {
@@ -46,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         html.innerText = item.textBox;
         trendingContainer.appendChild(html);
     });
+    console.log("The trendingContainer has been loaded");    
 });
 
     // document.getElementById('fetchWeatherBtn').addEventListener('onClick', fetchWeather);
