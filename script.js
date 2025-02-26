@@ -19,6 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
         html.innerHTML = item.threeImages;
         projectContainer.appendChild(html);
     });
+    const projectContainer = document.getElementById(".projects");
+        textData.forEach(item => {
+            let html = document.createElement("div");
+            html.className = "card";
+            html.innerText = item.heading4;
+            html.innerText = item.sentence;
+            html.innerHTML = item.threeImages;
+            projectContainer.appendChild(html);
+            });
 
     const announcementContainer = document.getElementById("announcementCards");
     announcementsData.forEach(item => {
