@@ -7,19 +7,56 @@
     <link rel="stylesheet" href="./styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODIN Admin Dashboard Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+</head>
+<body>
     <div id="container">
-        <section class="sidebar-container"></section>
-        <section class="mainbar-container">
-            <div class="header-container">
-                <section class="top-container">
-                    <section class="left-container"></section>
-                    <section class="right-container"></section>
-                </section>
-                <section class="bottom-container">
-                    <div class="first-con"></div>
-                    <div class="second-con"></div>
-                </section>
+        <div class="sidebar">
+            <div class="logo-text">
+                <img class="logo-img" src="./icons/view-dashboard.svg" alt="logo-img">
+                <h1>Dashboard</h1>
+            </div>
+            <div id="sidebar" class="list-items"></div>
+            <button id="toggleButton">Get Temperature</button>
+            <div id="temperatureDisplay" style="display: none;"></div>
+        </div>
+        <section class="mainbar">
+            <div class="header">
+                <div class="top-container">
+                    <div class="left-container">
+                        <div class="search-icon search">
+                            <span class="mdi mdi-magnify"></span>
+                        </div>
+                        <div class="search-bar search"><input type="text" id="search_bar" name="search_bar" placeholder="search..."></div>
+                    </div>
+                    <section class="right-container">
+                        <section class="right-container">
+                            <div class="notification-icon right-div"><span class="mdi mdi-bell-badge-outline"></span></div>
+                            <div class="cat-head-image right-div"><img src="./icons/emoticon-cool-outline.svg" alt="cat head image"></div>
+                            <div class="name-text right-div"><span class="name-user">MorganOakley</span></div></section>
+                    </section>
+                </div>
+                <div class="bottom-container">
+                    <div class="first-con">
+                        <div class="image-large">
+                            <img src="./icons/emoticon-cool-outline.svg" alt="cat head image">
+                        </div>
+                        <div class="text-large">
+                            <span class="greet-user">Hi there,</span><p class="name-morgan">Morgan Oakley (@morgan)</p>
+                        </div>
+                    </div>
+                    <div class="second-con">
+
+                    </div>
+                </div>
             </div>
             <div class="body-container">
                 <div class="left-body-con"></div>
@@ -27,12 +64,10 @@
             </div>
         </section>
     </div>
-    <script src="nav_elements.js"></script>
-    <button id="toggleButton">Get Temperature</button>
-    <div id="temperatureDisplay" style="display: none;"></div>
-    <script src="projects.js"></script>
-    <script src="announcements.js"></script>
-    <script src="trending.js"></script>
-    <script src="script.js"></script>
+    <script src="/nav_elements.js"></script>
+    <script src="/projects.js"></script>
+    <script src="/announcements.js"></script>
+    <script src="/trending.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
