@@ -13,7 +13,7 @@
     <title>ODIN Admin Dashboard Project</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
@@ -54,20 +54,29 @@
                         </div>
                     </div>
                     <div class="second-con">
-
+                        <button class="btn">New</button>
+                        <button class="btn">Upload</button>
+                        <button class="btn">Share</button>
                     </div>
                 </div>
             </div>
             <div class="body-container">
-                <div class="left-body-con"></div>
-                <div class="right-body-con"></div>
-            </div>
+                <div class="projects">
+                    <div>Your Projects</div>
+                    <div id="projectCards"></div>
+                </div>
+                <div>
+                    <div class="announcements">Announcements</div>
+                        <div id="announcementCards"></div>
+                    <div class="trending">Trending</div>
+                        <div id="trendingCards"></div>
+                </div>
         </section>
     </div>
-    <script src="/nav_elements.js"></script>
-    <script src="/projects.js"></script>
-    <script src="/announcements.js"></script>
-    <script src="/trending.js"></script>
-    <script src="/script.js"></script>
+    <script src="nav_elements.js"></script>
+    <script src="projects.js"></script>
+    <script src="announcements.js"></script>
+    <script src="trending.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,27 +1,44 @@
-function createAndAppendElement(tag, parent, classNames = [], innerHTML = "") {
-    const element = document.createElement(tag);
-    classNames.forEach((className) => element.classList.add(className));
-    if (innerHTML) element.innerHTML = innerHTML;
-    parent.appendChild(element);
-    return element;
-}
+import {iconsData} from './nav_elements.js';
+import {textData} from './projects.js';
+import {announcementsData} from './announcements.js';
+import {trendingData} from 'trending.js';
 
-    const selectors = [
-        ".second-con",
- ];
-    const elements = {};
-    selectors.forEach(selector => {
-        elements[selector] = document.querySelector(selector);
-});
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('The page has loaded!');
 
-const buttonTexts = ["New", "Upload", "Share"];
-buttonTexts.forEach(text => {
-    createAndAppendElement("button", elements[".second-con"], ["btn"], text);
+    const sidebarContainer = document.getElementById("sidebar");
+    iconsData.forEach(item => {
+        let html = document.createElement("div");
+        html.className = item.icon;
+        html.innerText = item.label;
+        sidebarContainer.appendChild(html);
+    });
 });
+console.log("The sidebar has been loaded");
 
-const sidebarContainer = document.getElementById("sidebar");
-iconsData.forEach((item) => {
-    const listItem = document.createElement('li');
-    listItem.textContent = item;
-    itemList.appendChild(listItem);
-});
+    const projectContainer = document.getElementById(".projects");
+        textData.forEach(item => {
+            let html = document.createElement("div");
+            html.className = "card";
+            html.innerText = item.heading4;
+            html.innerText = item.sentence;
+            html.innerHTML = item.threeImages;
+            projectContainerContainer.appendChild(html);
+            });
+
+   const anncouncementContainer = document.getElementById(".announcements");
+   announcementsData.forEach(item => {
+         let html = document.createElement("div");
+         html.className = "card";
+         html.innerText = item.heading;
+         html.innerText = item.content;
+         anncouncementContainer.appendChild(html);
+    });
+    const trendingContainer = document.getElementById(".trending");
+    trendingData.forEach(item => {
+          let html = document.createElement("div");
+          html.className = "card";
+          html.innerText = item.imageBox;
+          html.innerText = item.textBox;
+          trendingContainer.appendChild(html);
+     });
