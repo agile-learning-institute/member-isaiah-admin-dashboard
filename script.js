@@ -1,8 +1,3 @@
-import {iconsData} from './nav_elements.js';
-import {textData} from './projects.js';
-import {announcementsData} from './announcements.js';
-import {trendingData} from 'trending.js';
-
 document.addEventListener('DOMContentLoaded', function () {
     console.log('The page has loaded!');
 
