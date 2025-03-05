@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('The page has loaded!');
 
     const projectContainer = document.getElementById("proj");
+    console.log("Project container found:", projectContainer);
 
-    textData.forEach(item => {
+    textData.forEach((item, index) => {
+        console.log("Creating card for:", item);
+
         const card = document.createElement("div");
         card.className = 'card';
 
@@ -23,7 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
         card.appendChild(cardText);
         card.appendChild(cardIcons);
         projectContainer.appendChild(card);
+
+        console.log(`Card ${index + 1} added to container.`);
     });
+
+    console.log("All cards should be added.");
     console.log("The projectContainer has been loaded");
 
     const announcementContainer = document.getElementById("cont-box");

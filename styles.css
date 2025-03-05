@@ -309,3 +309,11 @@ input {
     font-size: 10px;
     margin-left: 5px;
   }
+
+  .card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background: white;
+    display: inline-block; /* or use flexbox/grid */
+}
